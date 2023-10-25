@@ -1,10 +1,15 @@
 .c-first-footer{
+  width: 100%;
   padding-bottom: $content-padding-bottom;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   color: #cccccc; //Unique
-  font-size: 1.75rem; //Unique
+  font-size: 5vw;
   font-style: italic;
+
+  @media (min-width: 768px) {
+      font-size: 1.75rem;
+  }
 }

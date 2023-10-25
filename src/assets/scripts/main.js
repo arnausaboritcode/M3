@@ -34,13 +34,31 @@ toogleMenuElement.addEventListener('click', () => {
   logo.classList.toggle('c-main-nav__logoResponsive');
 });
 
-//Slider. Photo slide and anclas functionalit
+//Slider. Photo slide and anclas functionality
 
-document.querySelectorAll('.c-slider-container__slider-nav a').forEach(function (link) {
-  link.addEventListener('click', function (e) {
+const slider = document.querySelector('.c-slider-container__slider');
+const links = document.querySelectorAll('.c-slider-container__slider-nav a');
+
+
+slider.addEventListener('scroll', function () {
+  const scrollLeft = slider.scrollLeft;
+  const imageWidth = slider.clientWidth;
+
+  links.forEach(function (link, index) {
+    if (scrollLeft >= index * imageWidth && scrollLeft < (index + 1) * imageWidth) {
+      links.forEach(function (el) {
+        el.classList.remove('c-slider-container__slider-nav--active');
+      });
+      link.classList.add('c-slider-container__slider-nav--active');
+    }
+  });
+});
+
+  links.forEach(function (link) {
+    link.addEventListener('click', function (e) {
     e.preventDefault();
 
-    document.querySelectorAll('.c-slider-container__slider-nav a').forEach(function (el) {
+    links.forEach(function (el) {
       el.classList.remove('c-slider-container__slider-nav--active');
     });
 
@@ -52,6 +70,7 @@ document.querySelectorAll('.c-slider-container__slider-nav a').forEach(function 
     slider.scrollLeft = index * slider.clientWidth;
   });
 });
+
 
 //Initialize Aos library
 

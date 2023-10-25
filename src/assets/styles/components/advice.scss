@@ -18,7 +18,7 @@
   .c-advice-container__advice-box {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    column-gap: 75px;
 
     >*{
       flex: 1 1 150px;
@@ -36,12 +36,6 @@
 
     .c-advice-container__advice-content:hover {
       transform: translateY-content(0.6125rem);
-    }
-  }
-
-  .o-style{
-    h1{
-      height: 1px;
     }
   }
 }
