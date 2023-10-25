@@ -1,0 +1,36 @@
+.c-nutrition-container {
+  background-color: $auxiliary-color;
+  padding-top: $content-padding-top;
+  padding-bottom: $content-padding-bottom;
+  text-align: center;
+
+  h2 {
+    padding-bottom: $title-padding-bottom;
+    font-weight: $auxiliary-font-weight;
+    color: $primary-color;
+    font-size: $title-font-size;
+  }
+
+  h3{
+    font-weight: $main-font-weight;
+  }
+
+  span {
+    display: block;
+    color: $primary-color;
+  }
+
+  a{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    padding-top: 2rem;
+    text-decoration: none;
+    color: $primary-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+  }
+}

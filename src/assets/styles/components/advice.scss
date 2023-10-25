@@ -1,0 +1,49 @@
+.c-advice-container {
+  width: $content-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: $content-padding-top;
+  padding-bottom: $content-padding-bottom;
+  text-align: center;
+  line-height: $main-line-height;
+  font-size: $main-font-size;
+
+  h2{
+    padding-bottom: $title-padding-bottom;
+    font-weight: $auxiliary-font-weight;
+    color:$primary-color;
+    font-size: $title-font-size;
+  }
+
+  .c-advice-container__advice-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    >*{
+      flex: 1 1 150px;
+      padding: 1.87rem;
+    }
+
+    .c-advice-container__advice-content{
+      transform: translateY-content(0);
+      transition: $main-transition;
+    }
+
+    .c-advice-container__advice-content h4, .c-advice-container__advice-content img {
+      padding-bottom: 1rem;
+    }
+
+    .c-advice-container__advice-content:hover {
+      transform: translateY-content(0.6125rem);
+    }
+  }
+
+  .o-style{
+    h1{
+      height: 1px;
+    }
+  }
+}
+
+

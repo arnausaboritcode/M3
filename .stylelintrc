@@ -1,0 +1,39 @@
+{
+ "extends": ["stylelint-config-recommended-scss"],
+ "plugins": ["stylelint-selector-bem-pattern"],
+ "rules": {
+  "plugin/selector-bem-pattern": {
+    "preset": "bem",
+    "componentName": "[A-Z]+",
+    "componentSelectors": "^\\.c-\\S+(?:__[a-z][a-z0-9]*)?(?:--[a-z0-9]+)?$",
+    "utilitySelectors": "^\\.u-\\S+$"
+  },
+  "max-nesting-depth": 2,
+
+  "declaration-block-no-duplicate-properties": true,
+  "font-family-no-duplicate-names" : true,
+  "keyframe-block-no-duplicate-selectors" : true,
+  "no-duplicate-at-import-rules": true,
+
+  "block-no-empty" : true,
+  "comment-no-empty" : true,
+
+  "function-calc-no-unspaced-operator": true,
+  "keyframe-declaration-no-important":true,
+  "named-grid-areas-no-invalid" : true,
+  "string-no-newline":true,
+
+  "font-family-no-missing-generic-family-keyword":true,
+
+  "function-linear-gradient-no-nonstandard-direction":true,
+
+  "selector-anb-no-unmatchable":true,
+
+  "no-unknown-custom-properties":true,
+  "property-no-unknown":true,
+  "selector-pseudo-class-no-unknown":true,
+  "selector-pseudo-element-no-unknown":true,
+  "unit-no-unknown":true
+
+ }
+}

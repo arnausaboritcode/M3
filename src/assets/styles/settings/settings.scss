@@ -1,0 +1,42 @@
+/* Boilerplate default SCSS variables
+
+@use "sass:color";
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+$font-family-serif: "Georgia", "Times New Roman", serif;
+
+$uoc-corporate: #000078;
+$uoc-masterbrand: #73edff;
+$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+
+$mqMinWidth: 420px;
+
+*/
+
+//HomePage SCSS variables
+
+$main-color: #555555;
+$main-color-opposite: color.invert(#000);
+$primary-color: color.scale(#ff6720, $lightness: 15%);
+$auxiliary-color: #f8f8f8;
+
+$nav-default-height: 6.25rem;
+$body-max-width: 1920px;
+$content-max-width: math.percentage(math.div(1536px, $body-max-width));
+
+$content-padding-top: 8rem;
+$content-padding-bottom: 5rem;
+$title-padding-bottom: 3rem;
+
+$font-family-sans-serif: "Lato", sans-serif;
+$main-font-size: 14px;
+$title-font-size: 2.17rem;
+$main-line-height: 1.5;
+$main-font-weight: 400;
+$auxiliary-font-weight: 700;
+
+$main-transition: 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+
+

@@ -3,11 +3,54 @@
  * Do not include SCSS code in this file.
  */
 
+ /**
+ * Global import for mathematical calculations
+ */
+
+ @use "sass:math";
+
+  /**
+ * Global import for color calculations
+ */
+
+ @use "sass:color";
+
+ /**
+ * Import reset and/or normalize styles
+ */
+
+ @import "generic/generic";
+
 /**
  * Import variables
  */
 
-@import "variables";
+@import "settings/settings";
+
+/**
+ * Import functions
+ */
+
+ @import "tools/tools";
+
+/**
+ * Import bare HTML elements styling
+ */
+
+ @import "elements/elements";
+
+/**
+ * Import specific UI components
+ */
+
+ @import "components/main-nav";
+ @import "components/slider";
+ @import "components/advice";
+ @import "components/nutrition";
+ @import "components/success";
+ @import "components/first-footer";
+ @import "components/second-footer";
+ @import "components/third-footer";
 
 /**
  * Import npm dependencies
@@ -19,13 +62,16 @@
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
 
+/* Old Boilerplate layout*/
+
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
-
+/*
 @import "layouts/home";
-
+*/
 /**
  * Do NOT include anything else in this file!
  */
+

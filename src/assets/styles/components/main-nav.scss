@@ -1,0 +1,121 @@
+
+.c-main-nav {
+  display: flex;
+  justify-content: center;
+  height: $nav-default-height;
+  position: fixed;
+  width: 100%;
+  background:rgba($main-color-opposite, 0.8);
+  z-index: 2;
+
+  &.c-main-nav__toggle {
+    align-items: center;
+    height: 25rem;
+
+    @media(min-width:768px) {
+      max-width: $body-max-width;
+      height: $nav-default-height;
+    }
+  }
+
+  .c-main-nav__logo {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    z-index: 2;
+
+    &.c-main-nav__logoResponsive {
+      top: 20.6rem;
+    }
+  }
+
+  .c-main-nav__toggle-menu {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+
+    svg {
+      width: 2.5rem;
+      height: auto;
+
+    }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .c-main-nav__main-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    transform: translateY-content(-400%);
+
+    &.c-main-nav__main-menu__show {
+      transform: translateY-content(0);
+
+    }
+
+    .c-main-nav__main-menu-item {
+      padding: 1rem;
+    }
+
+    .c-main-nav__main-menu-item .c-main-nav__main-menu-item-link {
+      color: $main-color;
+      font-size: $main-font-size;
+      font-weight: $auxiliary-font-weight;
+      text-decoration: none;
+    }
+
+    .c-main-nav__main-menu-item .c-main-nav__main-menu-item-link:hover {
+      color: $primary-color;
+      transition: $main-transition;
+
+    }
+
+    .c-main-nav__main-menu-item .c-main-nav__main-menu-item-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.8rem;
+      width: 12.5rem;
+      height: 3rem;
+      border-radius: 1.5rem;
+      background-color:$primary-color;
+      color: $main-color-opposite;
+      font-weight: $auxiliary-font-weight;
+      font-size: $main-font-size;
+      text-decoration: none;
+      border: none;
+    }
+
+    .c-main-nav__main-menu-item .c-main-nav__main-menu-item-button:hover {
+      background-color: $main-color-opposite;
+      color: $primary-color;
+      border: 2px solid $primary-color;
+      transition: $main-transition;
+    }
+
+    @media(min-width:768px) {
+        flex-direction: row;
+        transform: translateY-content(0);
+        transition: $main-transition;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

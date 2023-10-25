@@ -4,24 +4,123 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg">
+    <link rel="stylesheet" type="text/css" href="assets/styles/main.scss"><!-- do not remove this line! -->
+    <link rel="stylesheet" href="../node_modules/aos/dist/aos.css" />
+    <script defer src="../node_modules/aos/dist/aos.js"></script>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <title>MundoGym</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title"><i class="fas fa-university"></i></h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+
+  <header>
+    <include src="./views/main-nav.html"></include>
+  </header>
+
+    <section class="c-slider-container">
+            <div class="c-slider-container__slider">
+                <img id="slide-1" src="assets/images/banner_1.webp" alt="Chica haciendo ejercicios con discos de pesas" />
+                <img id="slide-2" src="assets/images/banner_2.webp" alt="Chico haciendo estiramientos quiroprácticos" />
+                <img id="slide-3" src="assets/images/banner_3.webp" alt="Chico y chica corriendo sobre la cinta" />
+            </div>
+            <div class="c-slider-container__slider-nav">
+                <a class="c-slider-container__slider-nav--active" href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+    </section>
+
+    <section class="c-advice-container" id="advice-container">
+        <h2>¿Primeros consejos?</h2>
+        <div class="c-advice-container__advice-box">
+        <div class="c-advice-container__advice" data-aos="fade-right" data-aos-duration="1000" >
+            <div class="c-advice-container__advice-content">
+                <img src="assets/images/consejo_1.webp" alt="Primer consejo">
+                <h4>OBJETIVOS REALISTAS</h4>
+                <p>Pregúntate qué quieres lograr, ya sea perder peso, ganar músculo, mejorar la resistencia, etc. </p>
+            </div>
+        </div>
+        <div class="c-advice-container__advice" data-aos="fade-right" data-aos-duration="1000">
+            <div class="c-advice-container__advice-content">
+                <img src="assets/images/consejo_2.webp" alt="Segundo consejo">
+                <h4>CONSULTA A UN PROFESIONAL</h4>
+                <p>Un entrenador puede ayudarte a diseñar un plan de entrenamiento personalizado que se adapte a tus necesidades y metas. </p>
+            </div>
+        </div>
+        <div class="c-advice-container__advice" data-aos="fade-left" data-aos-duration="1000">
+            <div class="c-advice-container__advice-content">
+                <img src="assets/images/consejo_3.webp" alt="Tercer consejo">
+                <h4>COMIENZA CON MODERACIÓN</h4>
+                <p>No te exijas demasiado al principio. Es importante comenzar con ejercicios y cargas de trabajo adecuados a tu nivel de condición física. </p>
+            </div>
+        </div>
+        <div class="c-advice-container__advice" data-aos="fade-left" data-aos-duration="1000">
+            <div class="c-advice-container__advice-content">
+                <img src="assets/images/consejo_4.webp" alt="Cuarto consejo">
+                <h4>INCLUYE VARIACIÓN EN TU RUTINA</h4>
+                <p>Alterna entre diferentes tipos de ejercicios, como cardio, levantamiento de pesas y ejercicios de flexibilidad. </p>
+            </div>
+        </div>
     </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    </section>
+
+    <section class="c-nutrition-container" id="nutrition-container">
+        <h2>¿Quieres potenciar tus resultados en el gimnasio?</h2>
+        <h3><span>Descubre cómo una alimentación equilibrada </span>puede ser tu aliada en el camino hacia una vida más saludable</h3>
+        <a href="https://elpais.com/gastronomia/el-comidista/2019/07/26/articulo/1564140826_705837.html">Pincha aquí</a>
+    </section>
+
+    <section class="c-success-container" id="success-container">
+        <div class="c-success-container__success-bgblack">
+        <h2>¿Quiénes Han Triunfado en el Mundo del Fitness?</h2>
+        </div>
+        <div class="c-success-container__success-characters">
+            <div class="c-success-container__character" data-aos="fade-up" data-aos-duration="1000">
+                <div class="c-success-container__character-image">
+                    <img src="assets/images/dawyne.webp" alt="Dwayne The Rock Johnson">
+                </div>
+                <div class="c-success-container__character-content">
+                    <h4>Dwayne "The Rock" Johnson</h4>
+                    <span>Estrella de lucha libre convertida en actor y un icono del fitness. </span>
+                </div>
+        </div>
+            <div class="c-success-container__character" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="c-success-container__character-image">
+                        <img src="assets/images/jillian.webp" alt="Jillian Michaels">
+                    </div>
+                    <div class="c-success-container__character-content">
+                        <h4>Jillian Michaels</h4>
+                        <span>Entrenadora personal y autora, famosa por su participación en "The Biggest Loser".</span>
+                    </div>
+            </div>
+            <div class="c-success-container__character" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="c-success-container__character-image">
+                        <img src="assets/images/chris.webp" alt="Chris Hemsworth">
+                    </div>
+                    <div class="c-success-container__character-content">
+                        <h4>Chris Hemsworth</h4>
+                        <span>Actor conocido por su transformación física para interpretar a Thor en las películas de Marvel.</span>
+                    </div>
+            </div>
+            <div class="c-success-container__character" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="c-success-container__character-image">
+                        <img src="assets/images/kayla.webp" alt="Kayla Itsines">
+                    </div>
+                    <div class="c-success-container__character-content">
+                        <h4>Kayla Itsines</h4>
+                        <span>Entrenadora australiana famosa por el programa "Bikini Body Guide" (BBG) que ha ayudado a mujeres a ponerse en forma.</span>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <include src="./views/first-footer.html"></include>
+    <include src="./views/second-footer.html"></include>
+    <include src="./views/third-footer.html"></include>
+
   </body>
 </html>

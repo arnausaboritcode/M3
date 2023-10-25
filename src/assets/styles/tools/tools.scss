@@ -1,0 +1,6 @@
+
+//Homepage SCSS functions
+
+@function translateY-content($value) {
+  @return unquote('translateY(' + $value + ')');
+}
